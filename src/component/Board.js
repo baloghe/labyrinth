@@ -36,12 +36,16 @@ export default function Board({rows, cols, origMap, exCrd, finish}){
     setSolPath(pt);
     if(pt.length > 0){
     	//solution found
+		leaveBoard(newMoveCnt);
+    }
+  };
+  
+  const leaveBoard = (cnt) => {
       setBoardState("finish");
       const st1 = setTimeout(() => {
-      	finish(newMoveCnt);
+      	finish(cnt);
       	clearTimeout(st1);
-      }, 3000);
-    }
+      }, 2000);
   };
   
   const shiftRow = (r, d) => {
@@ -163,6 +167,10 @@ export default function Board({rows, cols, origMap, exCrd, finish}){
     }
     return ret;
   }
+  
+  const exitGame = () => {
+	leaveBoard(-1);
+  };
 
   const genRows = () => {
     let i=0;
@@ -185,7 +193,11 @@ export default function Board({rows, cols, origMap, exCrd, finish}){
       </tbody></table>
     </td><td className="padded">
       <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} />
-      </td></tr>
+      </td><td className="padded">
+	  <button className="startBtn" onClick={exitGame}>
+		  <span>Give up</span>
+		</button>
+	  </td></tr>
     </tbody></table>
   );
 }
