@@ -1,0 +1,10 @@
+table, td, th {
+  border-collapse: collapse;
+  padding: 0px;
+  border: none;
+}
+table.padded, td.padded, th.padded {
+  border-collapse: separate;
+  padding: 10px;
+  border: none;
+}

@@ -1,0 +1,23 @@
+.tile{
+  border-radius: 2px;
+  padding: 0px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #fcf6e8;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+}
+.tile-movable{
+  color: black;
+  border-color: #999999;
+}
+.tile-start{
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+.tile-finish{
+  background: linear-gradient(#fa4884, #ffe047);
+}
+.tile-path{
+  background: linear-gradient(#b8f76f, #e6facf);
+}

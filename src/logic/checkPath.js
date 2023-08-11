@@ -1,3 +1,7 @@
+import {cards, cardMap} from "../logic/cards.js";
+import coord2idx from "../logic/coord2idx.js";
+import idx2coord from "../logic/idx2coord.js";
+
 export default function checkPath (inGrid, rowNum, colNum, inStartIdx, inEndIdx) {
 	const stack = [{idx: inStartIdx, pth:[]}]; //entries: {idx: num, pth:[...num]}
   while(stack.length > 0 && stack[0].idx != inEndIdx){

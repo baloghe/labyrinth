@@ -1,0 +1,8 @@
+table, td, th {
+  border-collapse: collapse;
+  padding: 0px;
+  border: none;
+}
+td.spanned{
+  text-align:center;
+}
