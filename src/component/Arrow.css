@@ -6,7 +6,15 @@
   background-color: #F0F8FF;
   display: inline-block;
   text-align: center;
-  font-size: 40px;
+}
+.font-small{
+  font-size: 1rem;
+}
+.font-medium{
+  font-size: 1.5rem;
+}
+.font-large{
+  font-size: 2rem;
 }
 .arrow-pushable{
   color: #00008B;

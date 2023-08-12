@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Settings from "./Settings.js";
 import Board from "./Board.js";
 import checkPath from "../logic/checkPath.js";
@@ -9,12 +9,31 @@ import "./App.css";
 export default function App(){
 
 	const [gameState, setGameState] = useState("settings");
-	const [rows, setRows] = useState();
-	const [cols, setCols] = useState();
+	const [rows, setRows] = useState(3);
+	const [cols, setCols] = useState(4);
 	const [origGrid, setOrigGrid] = useState([]);
 	const [extraCard, setExtraCard] = useState();
 	const [moveCounter, setMoveCounter] = useState(0);
 	const [results, setResults] = useState([]);
+	
+	//query window size on creation, taken from:
+	//https://codingbeautydev.com/blog/react-get-window-width-height/#:~:text=To%20get%20the%20width%20and,innerHeight%20.
+	const [windowSize, setWindowSize] = useState([
+		window.innerWidth,
+		window.innerHeight,
+	  ]);
+
+	useEffect(() => {
+		const handleWindowResize = () => {
+		  setWindowSize([window.innerWidth, window.innerHeight]);
+		};
+
+		window.addEventListener('resize', handleWindowResize);
+
+		return () => {
+		  window.removeEventListener('resize', handleWindowResize);
+		};
+	  }, []);
   
   const setupBoard = (inr, inc) => {
   	let bNeeded=true;
@@ -63,6 +82,8 @@ export default function App(){
  		return (
     <Settings
       start={startGame}
+	  inRows={rows}
+	  inCols={cols}
     />
     );
   } else if(gameState == "game"){
@@ -73,6 +94,7 @@ export default function App(){
      origMap={origGrid}
      exCrd={extraCard}
      finish={gameFinished}
+	 wSize={windowSize}
      />
     );
   } else if(gameState == "results"){

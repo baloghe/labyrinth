@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 import "./Settings.css";
 
-export default function Settings({start}){
+export default function Settings({start, inRows, inCols}){
 
-	const [rowNum, setRowNum] = useState(3);
-	const [colNum, setColNum] = useState(4);
+	const [rowNum, setRowNum] = useState(inRows);
+	const [colNum, setColNum] = useState(inCols);
   
   const rowNumChanged = (e) => {
   	setRowNum(e.target.value);

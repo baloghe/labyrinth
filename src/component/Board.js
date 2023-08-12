@@ -10,9 +10,9 @@ import gridShiftCol from "../logic/gridShiftCol.js";
 
 import "./ExtraCardManager.css";
 
-export default function Board({rows, cols, origMap, exCrd, finish}){
+export default function Board({rows, cols, origMap, exCrd, finish, wSize}){
 
-	const [extraCard, setExtraCard] = useState(exCrd);
+  const [extraCard, setExtraCard] = useState(exCrd);
   const [actMap, setActMap] = useState(origMap);
   const [solPath, setSolPath] = useState([]);
   const [boardState, setBoardState] = useState("game");
@@ -82,6 +82,24 @@ export default function Board({rows, cols, origMap, exCrd, finish}){
         );
   }
   
+  const getFontSize = () => {
+	if(rows * cols <= 16){
+		return 'font-large';
+	} else if(rows * cols <= 33){
+		return 'font-medium';
+	} else {
+		return 'font-small'
+	}
+  };
+  
+  const getLayout = () => {
+	if(wSize[0] < wSize[1]){
+		return 'V';
+	} else {
+		return 'H';
+	}
+  };
+  
   const getControl = (r,c,m) => {
   	let caption, dir, cbk, idx;
     if(c==(parseInt(cols)+1)){
@@ -117,6 +135,7 @@ export default function Board({rows, cols, origMap, exCrd, finish}){
             arrowClicked={cbk}
             idx={idx}
             direction={dir}
+			fontSize={getFontSize()}
           />
         </td>
     );
@@ -125,7 +144,7 @@ export default function Board({rows, cols, origMap, exCrd, finish}){
   const getTile = (c,m,i,spec) => {
   	return (
         <td key={'c'+i}>
-          <Tile caption={c} isMovable={m} special={spec}/>
+          <Tile caption={c} isMovable={m} special={spec} fontSize={getFontSize()}/>
         </td>
         );
   }
@@ -185,19 +204,41 @@ export default function Board({rows, cols, origMap, exCrd, finish}){
     return ret;
   }
   
-  return (
-  	<table className="padded"><tbody>
-    <tr><td className="padded">
-      <table><tbody>
-      {genRows()}
-      </tbody></table>
-    </td><td className="padded">
-      <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} />
-      </td><td className="padded">
-	  <button className="startBtn" onClick={exitGame}>
-		  <span>Give up</span>
-		</button>
-	  </td></tr>
-    </tbody></table>
-  );
+  if( getLayout()==='H' ){
+	  return (
+		<table className="padded"><tbody>
+		<tr><td className="padded">
+		  <table><tbody>
+		  {genRows()}
+		  </tbody></table>
+		</td><td className="padded">
+		  <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} />
+		  </td><td className="padded">
+		  <button className="startBtn" onClick={exitGame}>
+			  <span>Give up</span>
+			</button>
+		  </td></tr>
+		</tbody></table>
+		);
+  } else {
+	  return (
+		<table className="padded"><tbody>
+		<tr><td className="padded">
+		  <table><tbody>
+		  {genRows()}
+		  </tbody></table>
+		</td>
+		</tr>
+		<tr><td className="padded">
+		  <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} />
+		  </td>
+		</tr>
+		<tr><td className="padded">
+		  <button className="startBtn" onClick={exitGame}>
+			  <span>Give up</span>
+			</button>
+		  </td></tr>
+		</tbody></table>
+		);
+  }
 }

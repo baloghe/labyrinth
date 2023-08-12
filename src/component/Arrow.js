@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Arrow.css";
 
-export default function Arrow({caption, isPushable, arrowClicked, idx, direction}){
+export default function Arrow({caption, isPushable, arrowClicked, idx, direction, fontSize}){
 	
   const [pushable, setPushable] = useState(isPushable);
   
@@ -9,12 +9,15 @@ export default function Arrow({caption, isPushable, arrowClicked, idx, direction
   	arrowClicked(idx, direction);
   }
   
-  const actClassNames = x => "arrow" + " " + (x ? "arrow-pushable" : "arrow-frozen");
+  const actClassNames = (x,y) => "arrow" 
+								+ " " + (x ? "arrow-pushable" : "arrow-frozen") 
+								+ " " + y
+								;
   
   //console.log(`movable=${movable}, actClassNames=${actClassNames(movable)}`);
 
 	return (
-  <div className={actClassNames(pushable)} onClick={handleClick}>
+  <div className={actClassNames(pushable, fontSize)} onClick={handleClick}>
     {caption}
   </div>
   );
