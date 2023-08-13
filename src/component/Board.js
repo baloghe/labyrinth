@@ -83,9 +83,9 @@ export default function Board({rows, cols, origMap, exCrd, finish, wSize}){
   }
   
   const getFontSize = () => {
-	if(rows * cols <= 16){
+	if(rows * cols <= 25){
 		return 'font-large';
-	} else if(rows * cols <= 33){
+	} else if(rows * cols <= 50){
 		return 'font-medium';
 	} else {
 		return 'font-small'
@@ -212,7 +212,7 @@ export default function Board({rows, cols, origMap, exCrd, finish, wSize}){
 		  {genRows()}
 		  </tbody></table>
 		</td><td className="padded">
-		  <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} />
+		  <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} fontSize={getFontSize()} />
 		  </td><td className="padded">
 		  <button className="startBtn" onClick={exitGame}>
 			  <span>Give up</span>
@@ -230,7 +230,7 @@ export default function Board({rows, cols, origMap, exCrd, finish, wSize}){
 		</td>
 		</tr>
 		<tr><td className="padded">
-		  <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} />
+		  <ExtraCardManager excrdCaption={extraCard} rotateCW={turnCW} rotateCCW={turnCCW} fontSize={getFontSize()} />
 		  </td>
 		</tr>
 		<tr><td className="padded">
