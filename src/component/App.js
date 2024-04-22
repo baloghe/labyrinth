@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Settings from "./Settings.js";
 import Board from "./Board.js";
 import checkPath from "../logic/checkPath.js";
-import {cards, cardMap} from "../logic/cards.js";
+import {cardsSvg, cardMap} from "../logic/cards.js";
 
 import "./App.css";
 
@@ -42,14 +42,14 @@ export default function App(){
       brd=[];
       for(let r=0; r<inr; r++){
         for(let c=0; c<inc; c++){
-          let idx = Math.floor(Math.random() * parseInt(cards.length));
-          brd.push(cards[idx].caption);
+          let idx = Math.floor(Math.random() * parseInt(cardsSvg.length));
+          brd.push(cardsSvg[idx].caption);
         }//c
       }//r
       bNeeded = (checkPath(brd, inr, inc, (inr-1)*inc, inc-1).length>0);
       if(bNeeded){console.log(`generated board already solved => generate new one`);}
     }//wend
-    let excrd = cards[Math.floor(Math.random() * parseInt(cards.length))].caption;
+    let excrd = cardsSvg[Math.floor(Math.random() * parseInt(cardsSvg.length))].caption;
     
    setOrigGrid(brd);
    setExtraCard(excrd);

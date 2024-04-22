@@ -1,4 +1,6 @@
 import React from "react";
+import getTileSvg from "../logic/getTileSvg.js";
+
 import "./Tile.css";
 
 export default function Tile({caption, isMovable, special, fontSize}){
@@ -17,7 +19,7 @@ export default function Tile({caption, isMovable, special, fontSize}){
   
 	return (
   <div className={actClassNames()}>
-    {caption}
+	  {getTileSvg(caption)}
   </div>
   );
 }

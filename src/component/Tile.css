@@ -6,15 +6,25 @@
   background-color: #fcf6e8;
   display: inline-block;
   text-align: center;
+  align-items: center;
 }
 .font-small{
   font-size: 1rem;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
 }
 .font-medium{
   font-size: 1.5rem;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
 }
 .font-large{
   font-size: 2rem;
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
 }
 .tile-movable{
   color: black;
