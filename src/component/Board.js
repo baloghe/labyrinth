@@ -83,9 +83,12 @@ export default function Board({rows, cols, origMap, exCrd, finish, wSize}){
   }
   
   const getFontSize = () => {
-	if(rows * cols <= 25){
+	const aw = wSize[0] / (cols+5),
+	      ah = wSize[1] / (rows+2)
+	      ;
+	if( (aw > 80) && (ah > 80) ){
 		return 'font-large';
-	} else if(rows * cols <= 50){
+	} else if( (aw > 50) && (ah > 50) ){
 		return 'font-medium';
 	} else {
 		return 'font-small'
