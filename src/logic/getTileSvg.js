@@ -4,6 +4,13 @@ function getFourWay(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="0" y1="10" x2="10" y2="10"/>
 		<line x1="10" y1="10" x2="10" y2="0"/>
@@ -15,6 +22,10 @@ function getFourWay(baseColor){
 		<line x1="20" y1="20" x2="20" y2="30"/>
 		<rect width="30" height="10" x="0" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="30" x="10" y="0" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -25,10 +36,19 @@ function getHorizontal(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="0" y1="10" x2="30" y2="10"/>
 		<line x1="0" y1="20" x2="30" y2="20"/>
 		<rect width="30" height="10" x="0" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="0" width="30" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="20" width="30" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -39,10 +59,19 @@ function getVertical(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="10" y1="0" x2="10" y2="30"/>
 		<line x1="20" y1="0" x2="20" y2="30"/>
 		<rect width="10" height="30" x="10" y="0" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -53,6 +82,13 @@ function getTDown(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="0" y1="10" x2="30" y2="10"/>
 		<line x1="0" y1="20" x2="10" y2="20"/>
@@ -61,6 +97,9 @@ function getTDown(baseColor){
 		<line x1="20" y1="20" x2="20" y2="30"/>
 		<rect width="30" height="10" x="0" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="10" y="20" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="0" width="30" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -71,6 +110,13 @@ function getTRight(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="10" y1="0" x2="10" y2="30"/>
 		<line x1="20" y1="0" x2="20" y2="10"/>
@@ -79,6 +125,9 @@ function getTRight(baseColor){
 		<line x1="20" y1="20" x2="30" y2="20"/>
 		<rect width="10" height="30" x="10" y="0" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="20" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -89,6 +138,13 @@ function getTUp(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="0" y1="20" x2="30" y2="20"/>
 		<line x1="0" y1="10" x2="10" y2="10"/>
@@ -97,6 +153,9 @@ function getTUp(baseColor){
 		<line x1="20" y1="10" x2="20" y2="0"/>
 		<rect width="30" height="10" x="0" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="10" y="0" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="20" width="30" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="00" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -107,6 +166,13 @@ function getTLeft(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="20" y1="0" x2="20" y2="30"/>
 		<line x1="0" y1="10" x2="10" y2="10"/>
@@ -115,6 +181,9 @@ function getTLeft(baseColor){
 		<line x1="10" y1="20" x2="10" y2="30"/>
 		<rect width="10" height="30" x="10" y="0" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="0" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="20" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -125,6 +194,13 @@ function getLeftUp(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="0" y1="10" x2="10" y2="10"/>
 		<line x1="10" y1="10" x2="10" y2="0"/>
@@ -132,6 +208,9 @@ function getLeftUp(baseColor){
 		<line x1="20" y1="20" x2="20" y2="0"/>
 		<rect width="20" height="10" x="0" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="10" y="0" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="20" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="20" width="20" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -142,6 +221,13 @@ function getUpRight(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="10" y1="0" x2="10" y2="20"/>
 		<line x1="10" y1="20" x2="30" y2="20"/>
@@ -149,6 +235,9 @@ function getUpRight(baseColor){
 		<line x1="20" y1="10" x2="30" y2="10"/>
 		<rect width="20" height="10" x="10" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="10" y="0" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="10" y="20" width="20" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="0" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -159,6 +248,13 @@ function getRightDown(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="10" y1="10" x2="30" y2="10"/>
 		<line x1="10" y1="10" x2="10" y2="30"/>
@@ -166,6 +262,9 @@ function getRightDown(baseColor){
 		<line x1="20" y1="20" x2="20" y2="30"/>
 		<rect width="20" height="10" x="10" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="10" y="20" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="0" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="10" y="0" width="20" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="20" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -176,6 +275,13 @@ function getDownLeft(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<line x1="0" y1="20" x2="10" y2="20"/>
 		<line x1="10" y1="20" x2="10" y2="30"/>
@@ -183,6 +289,9 @@ function getDownLeft(baseColor){
 		<line x1="20" y1="10" x2="20" y2="30"/>
 		<rect width="20" height="10" x="0" y="10" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
 		<rect width="10" height="10" x="10" y="20" fill="yellow" fill-opacity="0.5" stroke-opacity="0" />
+        <rect x="20" y="0" width="10" height="30" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="0" width="20" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
+        <rect x="0" y="20" width="10" height="10" fill="url(#bricks)" stroke="white" stroke-opacity="1.0" />
 	  </g>
 	</svg>
 	);
@@ -193,6 +302,13 @@ function NoSuchWay(baseColor){
 	
 	return (
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	  <defs>
+	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
+		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="4" height="4" x="5" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+		<rect width="8" height="4" x="1" y="5" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
+	  </pattern>
+	  </defs>
 	  <g stroke="black" stroke-width="1" stroke-linecap="round">
 		<circle cx="15" cy="15" r="10" />
 	  </g>

@@ -1,5 +1,10 @@
-table, td, th {
+table, tr, td, th {
   border-collapse: collapse;
   padding: 0px;
   border: none;
+  border-spacing: 0 0px;
+}
+
+td {
+	display: table-cell;
 }
