@@ -1,9 +1,7 @@
-
-
 function getFourWay(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -35,7 +33,7 @@ function getFourWay(baseColor){
 function getHorizontal(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -58,7 +56,7 @@ function getHorizontal(baseColor){
 function getVertical(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -81,7 +79,7 @@ function getVertical(baseColor){
 function getTDown(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -109,7 +107,7 @@ function getTDown(baseColor){
 function getTRight(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -137,7 +135,7 @@ function getTRight(baseColor){
 function getTUp(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -165,7 +163,7 @@ function getTUp(baseColor){
 function getTLeft(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -193,7 +191,7 @@ function getTLeft(baseColor){
 function getLeftUp(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -220,7 +218,7 @@ function getLeftUp(baseColor){
 function getUpRight(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -247,7 +245,7 @@ function getUpRight(baseColor){
 function getRightDown(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -274,7 +272,7 @@ function getRightDown(baseColor){
 function getDownLeft(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
@@ -301,7 +299,7 @@ function getDownLeft(baseColor){
 function NoSuchWay(baseColor){
 	
 	return (
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 28">
 	  <defs>
 	  <pattern id="bricks" width="10" height="10" patternUnits="userSpaceOnUse" >
 		<rect width="4" height="4" x="0" y="0" stroke="brown" fill="brown" fill-opacity="0.5" stroke-opacity="0" />
